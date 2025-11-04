@@ -32,7 +32,7 @@ public class BuggyPlayerController : MonoBehaviour
 
         if(moveInput != 0)
         {
-            anim.SetBool("IsMove", true);  //brak znaku na końcu
+            anim.SetBool("IsMove", true);  //brak znaku na końcu, nie prawidlowa metoda (moveInput != 0)
         }
         else
         {
