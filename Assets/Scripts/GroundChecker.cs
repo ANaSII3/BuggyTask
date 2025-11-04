@@ -5,10 +5,10 @@ using UnityEngine;
 public class GroundChecker : MonoBehaviour
 {
     public bool isGrounded;
-    public BoxCollider2D collider;
+    public BoxCollider2D Collider;
     public void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
+        Collider = GetComponent<BoxCollider2D>();
     }
     void Update()
     {

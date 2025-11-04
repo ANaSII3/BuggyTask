@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 4792666174164193743}
   - component: {fileID: 8515623179854765327}
   - component: {fileID: 8515623179854765328}
+  - component: {fileID: 8515623179854765329}
   m_Layer: 0
   m_Name: BuggyHero
   m_TagString: Untagged
@@ -597,7 +598,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6657552862223581189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,7 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
-  collider: {fileID: 8515623179854765327}
+  Collider: {fileID: 146244005}
 --- !u!4 &7251364410179734083
 Transform:
   m_ObjectHideFlags: 0
@@ -638,6 +639,7 @@ GameObject:
   - component: {fileID: 7251364410179734083}
   - component: {fileID: 9205365899000250098}
   - component: {fileID: 1636484114749507806}
+  - component: {fileID: 9205365899000250099}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -702,8 +704,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17dd7dbe4996b49b869f4d92ea67ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  anim: {fileID: 1636484114749507806}
+  moveSpeed: 5
+  rb: {fileID: 4792666174164193743}
+  anim: {fileID: 0}
+  spriteRenderer: {fileID: 9205365899000250098}
+  groundChecker: {fileID: 6657552862223581189}
+--- !u!95 &8515623179854765329
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4651782491455546155}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48cb658b92d7e134584d3f12ae412787, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8570082476557414424
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +845,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9205365899000250099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8482557541310097254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c17dd7dbe4996b49b869f4d92ea67ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rb: {fileID: 4792666174164193743}
+  anim: {fileID: 1636484114749507806}
+  spriteRenderer: {fileID: 9205365899000250098}
+  groundChecker: {fileID: 6657552862223581189}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
